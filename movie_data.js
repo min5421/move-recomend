@@ -1,5 +1,6 @@
 const movie_info = document.querySelector(".movie_data");
 const movie_c_info = document.querySelector(".movie_recommend");
+check = ["a", ];
 const API_KEY = "27b04d28b3c48267ca2d4119b0197e69";
 
 function getMovie2(query) {
@@ -68,8 +69,13 @@ function getMovie_Genre (id) {
         const title = document.createElement("div");
         img.src = `https://image.tmdb.org/t/p/w200/${json.results[0].poster_path}`;
         title.innerText = json.results[0].title;
-        movie_c_info.appendChild(img);
-        movie_c_info.appendChild(title);
+
+        if(!check.includes(title.innerText)){  
+          check.push(title.innerText);
+        
+          movie_c_info.appendChild(img);
+          movie_c_info.appendChild(title);
+        }
         
         img.addEventListener("click", function(e) {init2(json.results[0].title)})
       });
