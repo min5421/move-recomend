@@ -1,6 +1,7 @@
 const movie_info = document.querySelector(".movie_data");
 const movie_c_info = document.querySelector(".movie_recommend");
 const API_KEY = "27b04d28b3c48267ca2d4119b0197e69";
+let mov = document.querySelector('.movie_data');
 
 function getMovie2(query) {
     fetch(
@@ -71,7 +72,15 @@ function getMovie_Genre (id) {
         movie_c_info.appendChild(img);
         movie_c_info.appendChild(title);
         
-        img.addEventListener("click", function(e) {init2(json.results[0].title)})
+        img.addEventListener("click", function(e) {
+            let a = mov.children.length
+			init2(json.results[0].title)
+			if (a > 0){
+				for (let i=0;i<a;i++){
+					mov.removeChild(mov.children[0])
+				}
+			}
+        })
       });
   }
 
