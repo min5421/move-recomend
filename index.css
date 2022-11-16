@@ -58,12 +58,14 @@ body {
   outline: 0;
 }
 
+
 .button:hover {
-  background: rgba(128, 128, 128, 0.9);
-  color: #e0e5ec;
   cursor: pointer;
+  background: rgba(255, 255, 255, 0.9);
+  color:rgb(0, 0, 0);
   box-shadow: 0 2px 4px rgba(0, 79, 255, 0.6);
 }
+
 .right button {
   /* width: 700px;
   height: 150px;
