@@ -80,12 +80,12 @@ function getMovie_Genre (id) {
         
         img.addEventListener("click", function(e) {
             let a = mov.children.length
-			init2(json.results[0].title)
-			if (a > 0){
-				for (let i=0;i<a;i++){
-					mov.removeChild(mov.children[0])
-				}
-			}
+	    init2(json.results[0].title)
+	    if (a > 0){
+		for (let i=0;i<a;i++){
+		    mov.removeChild(mov.children[0])
+		}
+	    }
         })
       });
   }
