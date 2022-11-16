@@ -1,6 +1,6 @@
 const movie_info = document.querySelector(".movie_data");
 const movie_c_info = document.querySelector(".movie_recommend");
-check = ["a", ];
+check = [];
 const API_KEY = "27b04d28b3c48267ca2d4119b0197e69";
 
 function getMovie2(query) {
