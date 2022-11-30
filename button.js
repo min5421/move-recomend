@@ -83,7 +83,7 @@ function make_enter() {
   p_enter.appendChild(next);
   next.addEventListener("click", function (event) {
     localStorage.setItem("adult", adult);
-    localStorage.setItem("clicked", clicked);
+    localStorage.setItem("clicked", JSON.stringify(clicked));
     location.href = "recommend.html";
   });
 }
