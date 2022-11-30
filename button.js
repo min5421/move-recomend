@@ -28,13 +28,13 @@ function getMovie() {
           item.id = genre.id;
           genre_group.appendChild(item);
           item.addEventListener("click", function (event) {
-             if(item.style.backgroundColor == "black"){
+             if(item.style.backgroundColor == "rgb(24, 39, 76)"){
               item.style.backgroundColor = "white";
-              item.style.color = "black";
+              item.style.color = "rgb(24, 39, 76)";
               clicked.pop(genre.name);
 
             } else{
-                item.style.backgroundColor = "black";
+                item.style.backgroundColor = "rgb(24, 39, 76)";
                 item.style.color = "white"
                 clicked.push(genre.name);
             }
@@ -52,12 +52,12 @@ function makesec() {
   adult_all.appendChild(adults);
   adults.id = "adult";
   adults.addEventListener("click", function (event) {
-    if(adults.style.backgroundColor == "black"){
+    if(adults.style.backgroundColor == "rgb(24, 39, 76)"){
       adults.style.backgroundColor = "white";
-      adults.style.color = "black";
+      adults.style.color = "rgb(24, 39, 76)";
       adult = false;
     } else{
-      adults.style.backgroundColor = "black";
+      adults.style.backgroundColor = "rgb(24, 39, 76)";
       adults.style.color = "white";
       adult = true;
     }
@@ -83,7 +83,7 @@ function make_enter() {
   p_enter.appendChild(next);
   next.addEventListener("click", function (event) {
     localStorage.setItem("adult", adult);
-    localStorage.setItem("clicked", clicked);
+    localStorage.setItem("clicked", JSON.stringify(clicked));
     location.href = "recommend.html";
   });
 }

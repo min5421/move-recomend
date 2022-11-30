@@ -27,8 +27,8 @@ function getMovie(query) {
 ${v.poster_path}`;
 
         movie_info.appendChild(div);
-        div.appendChild(title);
         div.appendChild(img);
+        div.appendChild(title);
       });
     });
 }
