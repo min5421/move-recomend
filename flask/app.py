@@ -8,7 +8,7 @@ from flask_mysqldb import MySQL
 
 # load_dotenv()
 
-# flask 객체 인스턴스 생섯
+# flask 객체 인스턴스 생성 
 app = Flask(__name__)
 CORS(app)
 mysql = MySQL(app)
@@ -33,7 +33,7 @@ app.config['MYSQL_DB'] = os.getenv('MYSQL_DB')
 
 
 # 접속 url 설정
-@app.route('/')
+@app.route('/index')
 def index():
     return render_template('index.html')
 
@@ -51,9 +51,9 @@ def about():
 @app.route('/', methods=['GET'])
 def index2():
     if session.get('logged_in'):
-        return render_template('home.html')
+        return render_template('index.html')
     else:
-        return render_template('index2.html', message="Hello!")
+        return render_template('index2.html', message="Check again, please.")
 
 
 @app.route('/register/', methods=['GET', 'POST'])
@@ -79,7 +79,7 @@ def login():
         data = User.query.filter_by(username=u, password=p).first()
         if data is not None:
             session['logged_in'] = True
-            return redirect(url_for('index2'))
+            return redirect(url_for('index'))
         return render_template('index2.html', message="Incorrect Details")
 
 
