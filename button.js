@@ -31,9 +31,10 @@ function getMovie() {
              if(item.style.backgroundColor == "rgb(24, 39, 76)"){
               item.style.backgroundColor = "white";
               item.style.color = "rgb(24, 39, 76)";
-              clicked.pop(genre.name);
-
-            } else{
+              let find = clicked.findIndex((e) => e == genre.name);
+              console.log(find);
+              clicked.splice(find,1);
+              } else{
                 item.style.backgroundColor = "rgb(24, 39, 76)";
                 item.style.color = "white"
                 clicked.push(genre.name);
