@@ -1,3 +1,4 @@
+//상단바
 .top{
   position: fixed;
   top: 0;
@@ -11,6 +12,9 @@
   box-shadow: 0 4px 16px rgba(0, 79, 255, 0.3);
 }
 
+
+
+//페이지의 구역을 나눴다
 .body-content{
   width: 75%;
   height: 100%;
@@ -34,6 +38,8 @@
   background-color:rgb(24, 39, 76);
   display: grid;
 }
+
+
 
 .genre_group {
   position: relative;
@@ -192,6 +198,9 @@ body {
   display: flex;
 }
 
+
+
+//두번쨰 페이지의 영화 포스터, 제목, 장르, 개요
 .info_img{
   width: 28%;
 }
