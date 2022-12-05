@@ -1,4 +1,4 @@
-//상단바
+/*상단바*/
 .top{
   position: fixed;
   top: 0;
@@ -14,7 +14,7 @@
 
 
 
-//페이지의 구역을 나눴다
+/*페이지의 구역을 나눴다*/
 .body-content{
   width: 75%;
   height: 100%;
@@ -40,7 +40,7 @@
 }
 
 
-
+/*장르 선택 버튼*/
 .genre_group {
   position: relative;
   display: grid;
@@ -143,6 +143,9 @@ body {
   color: ivory;
 } 
 */
+
+
+/*첫번째 페이지 영화 포스터, 다음으로 넘기는 버튼*/
 .trend_movie {
   color: ivory;
 }
@@ -152,6 +155,7 @@ body {
   padding-right: 100px;
   padding-left: 100px;
 }
+
 .prev_btn {
   color: rgb(255, 255, 255);
   background: rgb(0,0,0,0);
@@ -184,6 +188,9 @@ body {
   top: 100px;
   margin: 11% 10px 5px 10px;
 }
+
+
+/*두번째 페이지 구역 테두리*/ 
 #grid {
   height: 450px;
   border: 4px solid rgb(96, 96, 165);
@@ -199,8 +206,7 @@ body {
 }
 
 
-
-//두번쨰 페이지의 영화 포스터, 제목, 장르, 개요
+/*두번째 페이지의 영화 포스터, 제목, 장르, 개요*/
 .info_img{
   width: 28%;
 }
