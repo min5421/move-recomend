@@ -3,9 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>jaram workshop</title>
+    <title>movie</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href= "{{url_for('static', filename='index.css')}}" />
+
   </head>
 
   <body>
@@ -46,8 +47,8 @@
 
     <!-- <button onclick="location.href='genre.html'">genre</button> -->
 
-    <script src="trend.js"></script>
-    <script src="carousel.js"></script>
-    <script src="button.js"></script>
+    <script src="{{ url_for('static', filename='js/trend.js') }}" > </script>
+    <script src="{{ url_for('static', filename='js/carousel.js') }}" > </script>
+    <script src="{{ url_for('static', filename='js/button.js') }}" > </script>
   </body>
 </html>

@@ -7,7 +7,7 @@ import config
 db = SQLAlchemy()
 migrate = Migrate()
 from . import models
-from views import auth_views, main_views
+from . import auth_views, main_views
 
 
 def create_app():
@@ -19,7 +19,7 @@ def create_app():
     migrate.init_app(app, db)
 
     # 블루프린트
-    from .views import main_views
+    from . import main_views
     app.register_blueprint(main_views.bp)
     app.register_blueprint(auth_views.bp)
 

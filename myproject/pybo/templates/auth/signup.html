@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <title>Create account</title>
 </head>
+<link rel="stylesheet" href = "{{url_for('static', filename='logsytle.css')}}">
 <div class="container">
     <h5 class="my-3 border-bottom pb-2">Create</h5>
     <form method="post">
         {{ form.csrf_token }}
-        {% include "form_errors.html" %}
         <div class="mb-3">
             <label for="username">Username</label>
             <input type="text" class="form-control" name="username" id="username"
