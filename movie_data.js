@@ -110,6 +110,7 @@ function getMovie_Genre (id) {
           img.src = `https://image.tmdb.org/t/p/w200/${json.results[i].poster_path}`;
           title.innerText = json.results[i].title;
 
+          //영화 중복 출력하지 않도록 검사한다
           if(!check.includes(title.innerText)){  
             check.push(title.innerText);
           

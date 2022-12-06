@@ -28,12 +28,14 @@ function getMovie() {
           item.id = genre.id;
           genre_group.appendChild(item);
           item.addEventListener("click", function (event) {
+             // 버튼을 누르면 장르가 선택되고 한번더 누르면 취소된다
              if(item.style.backgroundColor == "rgb(24, 39, 76)"){
               item.style.backgroundColor = "white";
               item.style.color = "rgb(24, 39, 76)";
-              clicked.pop(genre.name);
-
-            } else{
+              let find = clicked.findIndex((e) => e == genre.name);
+              console.log(find);
+              clicked.splice(find,1);
+              } else{
                 item.style.backgroundColor = "rgb(24, 39, 76)";
                 item.style.color = "white"
                 clicked.push(genre.name);
@@ -52,6 +54,7 @@ function makesec() {
   adult_all.appendChild(adults);
   adults.id = "adult";
   adults.addEventListener("click", function (event) {
+    // 버튼을 누르면 adult가 선택되고 한번더 누르면 취소된다
     if(adults.style.backgroundColor == "rgb(24, 39, 76)"){
       adults.style.backgroundColor = "white";
       adults.style.color = "rgb(24, 39, 76)";
@@ -83,6 +86,7 @@ function make_enter() {
   p_enter.appendChild(next);
   next.addEventListener("click", function (event) {
     localStorage.setItem("adult", adult);
+    //JSON을 사용해야 배열을 다른 파일에서 쓸 수 있다
     localStorage.setItem("clicked", JSON.stringify(clicked));
     location.href = "recommend.html";
   });
