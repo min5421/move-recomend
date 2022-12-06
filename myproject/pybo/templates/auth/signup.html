@@ -3,32 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <title>Create account</title>
+    <link rel="stylesheet" href="login.css">
 </head>
 <link rel="stylesheet" href = "{{url_for('static', filename='logsytle.css')}}">
 <div class="container">
-    <h5 class="my-3 border-bottom pb-2">Create</h5>
-    <form method="post">
-        {{ form.csrf_token }}
-        <div class="mb-3">
-            <label for="username">Username</label>
-            <input type="text" class="form-control" name="username" id="username"
-                   value="{{ form.username.data or '' }}">
+    <div class="top"></div>
+
+        <div class="body-content">
+            <div class="main-content">
+
+                <h5 class="create">Create</h5>
+                <form method="post">
+                    {{ form.csrf_token }}
+                    <div class="username">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" name="username" id="username"
+                            value="{{ form.username.data or '' }}">
+                    </div>
+                    <div class="pw">
+                        <label for="password1">Password</label>
+                        <input type="password" class="form-control" name="password1" id="password1"
+                            value="{{ form.password1.data or '' }}">
+                    </div>
+                    <div class="pw">
+                        <label for="password2">Check password</label>
+                        <input type="password" class="form-control" name="password2" id="password2"
+                            value="{{ form.password2.data or '' }}">
+                    </div>
+                    <div class="e-m">
+                        <label for="email">Email</label>
+                        <input type="text" class="form-control" name="email" id="email"
+                            value="{{ form.email.data or '' }}">
+                    </div>
+                    <button type="submit" class="create_button">Create</button>
+                </form>
+
+            </div>
         </div>
-        <div class="mb-3">
-            <label for="password1">Password</label>
-            <input type="password" class="form-control" name="password1" id="password1"
-                   value="{{ form.password1.data or '' }}">
-        </div>
-        <div class="mb-3">
-            <label for="password2">Check password</label>
-            <input type="password" class="form-control" name="password2" id="password2"
-                   value="{{ form.password2.data or '' }}">
-        </div>
-        <div class="mb-3">
-            <label for="email">Email</label>
-            <input type="text" class="form-control" name="email" id="email"
-                   value="{{ form.email.data or '' }}">
-        </div>
-        <button type="submit" class="btn btn-primary">Create</button>
-    </form>
+
+    </div>
 </div>
