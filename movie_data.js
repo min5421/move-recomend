@@ -101,10 +101,14 @@ function getMovie_Genre (id) {
 
         console.log(query);
 
+        movie_c_info.style.display = "flex";
+        movie_c_info.style.flexDirection = "row";
+
+        
         for (let i = 0; i < json.results.length; i++)
         {
           //console.log(`${json.results[i].title}`);
-       
+          const div = document.createElement("div");
           const img = document.createElement("img");
           const title = document.createElement("div");
           img.src = `https://image.tmdb.org/t/p/w200/${json.results[i].poster_path}`;
@@ -113,9 +117,17 @@ function getMovie_Genre (id) {
           //영화 중복 출력하지 않도록 검사한다
           if(!check.includes(title.innerText)){  
             check.push(title.innerText);
-          
-            movie_c_info.appendChild(img);
-            movie_c_info.appendChild(title);
+            
+            div.classList = `cover slide slide0${(i - (i % 5)) / 5 + 1}`;
+            img.classList= "recommend_trend_img"
+
+            if(i < 5){
+              div.classList.add("active");
+            }
+
+            movie_c_info.appendChild(div);
+            div.appendChild(img);
+            div.appendChild(title);
           }
 
           img.addEventListener("click", function(e) {
