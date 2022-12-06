@@ -15,7 +15,7 @@ http://43.200.84.35:5000 [12월 10일까지 접속 가능]
 
 ## 4. 참고 오픈소스 목록
 1. https://github.com/YusunPark/Jaram_workshop [웹페이지 기본 구조 관련]
-2. https://github.com/pahkey[회원가입 관련]
+2. https://github.com/pahkey [jump to flask]
 
 ## 5. 참고 사이트
 https://wikidocs.net/81039 [jump to flask]
