@@ -7,8 +7,8 @@
 - 제작한 웹페이지 사진
 ![image](https://user-images.githubusercontent.com/102304870/205879415-2dd5379a-053d-434e-9443-8b230c544434.png)
 ![image](https://user-images.githubusercontent.com/102304870/205879432-ec039f66-0c07-4181-aece-ec85582c2779.png)
+![image](https://cdn.discordapp.com/attachments/658652107259379722/1049699624585281536/3.png)
 ![image](https://cdn.discordapp.com/attachments/658652107259379722/1049699613331963924/4.png)
-![image](https://user-images.githubusercontent.com/102304870/205879461-52ed7cf9-8b6c-4a96-8e78-aab18f7490c2.png)
 
 ## 3. 웹페이지 접속 링크
 http://43.200.84.35:5000 [12월 10일까지 접속 가능]
