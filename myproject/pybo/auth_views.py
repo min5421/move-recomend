@@ -5,10 +5,10 @@ from pybo import db
 from pybo.forms import UserCreateForm, UserLoginForm
 from pybo.models import User
 
-bp = Blueprint('auth', __name__, url_prefix='/auth')
+bp = Blueprint('auth', __name__, url_prefix='/')
 
 
-@bp.route('/signup/', methods=('GET', 'POST'))
+@bp.route('/', methods=('GET', 'POST'))
 def signup():
     form = UserCreateForm()
     if request.method == 'POST' and form.validate_on_submit():
@@ -19,9 +19,10 @@ def signup():
                         email=form.email.data)
             db.session.add(user)
             db.session.commit()
-            return render_template('auth/login.html')
+            return redirect(url_for('auth.login'))
         else:
             flash('Already exist')
+            return redirect(url_for('auth.login'))
     return render_template('auth/signup.html', form=form)
 
 
