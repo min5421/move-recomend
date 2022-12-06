@@ -1,0 +1,136 @@
+.top{
+    position: fixed;
+    top: 0;
+    width: 110%;
+    height: 60px;
+    margin-left: -50px;
+    background-color: rgb(255, 255, 255);
+    background-image: url("title.png");
+    background-repeat: no-repeat; 
+    background-size:40%;
+    box-shadow: 0 4px 16px rgba(0, 79, 255, 0.3);
+}
+
+.body-content{
+    width: 75%;
+    height: 690px;
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-bottom: 1%;
+}
+.box1 {
+    border: 5px solid #1ea4ff;
+    border-radius: 10px;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+.box2 {
+    border: 3px solid #1e5eff;
+    border-radius: 10px;
+    width: 320px;
+    height: 320px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main-content{
+    height: 630px;
+    border: 4px solid rgb(24, 39, 76);
+    padding: 25px;
+    display: flex;
+}
+
+.login{
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 25px;
+    margin: 20px 0px 50px 110px;
+}
+
+.name{
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 15px;
+    margin: 10px 0px 0px 15px;
+    
+}
+
+.password{
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 15px;
+    margin: 10px 0px 0px 34px;
+}
+
+.login_button{
+    width: 200px;
+    height: 30px;
+    color: rgb(0, 0, 0);
+    background: #ffffff;
+    font-weight: bold;
+    font-size: 15px;
+    border:  2px solid rgb(24, 39, 76);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 79, 255, 0.3);
+    transition: 0.3s;
+    position: relative;
+    margin: 40px 0px 0px 50px;
+}
+
+.create{
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 50px;
+    color: rgb(54, 54, 54);
+    margin: 80px 0px 0px 100px;
+}
+
+.username{
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 130px 0px 0px 100px;
+}
+
+.pw{
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 40px 0px 0px 100px;
+}
+
+.e-m{
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 40px 0px 0px 100px;
+}
+
+.create_button{
+    width: 600px;
+    height: 50px;
+    color: rgb(0, 0, 0);
+    background: #ffffff;
+    font-weight: bold;
+    font-size: 15px;
+    border:  2px solid rgb(24, 39, 76);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 79, 255, 0.3);
+    transition: 0.3s;
+    position: relative;
+    margin: 100px 0px 0px 0px;
+}
+
+
+body {
+    background: rgb(16, 16, 30);
+}
